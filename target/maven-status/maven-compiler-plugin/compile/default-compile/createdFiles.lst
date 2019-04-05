@@ -1,0 +1,5 @@
+com\chatRobot\service\IUserService.class
+com\chatRobot\controller\UserController.class
+com\chatRobot\dao\IUserDao.class
+com\chatRobot\service\impl\UserServiceImpl.class
+com\chatRobot\model\User.class

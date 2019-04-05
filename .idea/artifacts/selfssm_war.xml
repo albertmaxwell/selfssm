@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="selfssm:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="SELFSSM.war">
+      <element id="artifact" artifact-name="selfssm:war exploded" />
+    </root>
+  </artifact>
+</component>

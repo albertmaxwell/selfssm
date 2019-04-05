@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en" class="app">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"ce6724d67d","applicationID":"7388246","transactionName":"ew1eEUFcWVUHSh5UWVYWQgRQR0YWC1ZVUk4=","queueTime":0,"applicationTime":130,"agent":""}</script>
+    <script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>爱客CRM | 合同</title>
+    <title>爱客CRM</title>
+    <link rel="author" href="/humans.txt" />
+    <link rel="apple-touch-icon" type="image/x-icon" href="/assets/favicon-59339fbb024aa393e86970d2ac8081aabc828b40fb13372b9ac7744c9690da68.ico" />
+    <link rel="Shortcut Icon" type="image/x-icon" href="/assets/favicon-59339fbb024aa393e86970d2ac8081aabc828b40fb13372b9ac7744c9690da68.ico" />
+    <link rel="Bookmark" type="image/x-icon" href="/assets/favicon-59339fbb024aa393e86970d2ac8081aabc828b40fb13372b9ac7744c9690da68.ico" />
+    <script>
+        //<![CDATA[
+
+        window.crm_push_url = "https://qq.ikcrm.com:9696";
+        window.crm_push_access_token = "ba6f1da580110cc7d9c9f223b7f907d69b9e46fdf604c6e7b4b1dba8103dbfc882ffa2242c29e6408c8f3a";
+        window.temp_access_token = "user_9_temp_access_token";
+        window.leadFeature = {"class_name":"Lead","origin_label":"线索","label":"线索","enabled":true};
+        window.customerFeature = {"class_name":"Customer","origin_label":"客户","label":"客户","enabled":true};
+        window.contactFeature = {"class_name":"Contact","origin_label":"联系人","label":"联系人","enabled":true};
+        window.opportunityFeature = {"class_name":"Opportunity","origin_label":"商机","label":"商机","enabled":true};
+        window.contractFeature = {"class_name":"Contract","origin_label":"合同","label":"合同","enabled":true};
+        window.productFeature = {"class_name":"Product","origin_label":"产品","label":"产品","enabled":true};
+        window.expenseFeature = {"class_name":"Expense","origin_label":"费用","label":"费用","enabled":true};
+        window.expenseAccountFeature = {"class_name":"ExpenseAccount","origin_label":"费用报销单","label":"费用报销单","enabled":true};
+        window.receivedPaymentPlanFeature = {"class_name":"ReceivedPaymentPlan","origin_label":"回款计划","label":"回款计划","enabled":true};
+        window.expenseAccountSn = "报销单号";
+        window.salesCommissionFeature = true;
+        window.product_spec_column = {};
+        window.receivedPaymentApproveEnabled = true;
+
+        window.max_upload_size = '50';
+        window.qiniu_bucket = 'ikcrm-files-dev';
+        window.qiniu_token  = 'w2yRBQw0CPY-fsy6hxBjASopjHCTtT7RKFRtQeJz:lMysIo63bTrCJ2GbpH26kXDBK0o=:eyJzY29wZSI6ImlrY3JtLWZpbGVzLWRldiIsImRlYWRsaW5lIjoxNTU0MjY3MjIwfQ==';
+        window.qiniu_host   = 'https://dn-ikcrm-files-dev.qbox.me';
+        window.bypass_model     = false;
+        window.can_create_ann = true;
+        window.has_common_customer_feature = true;
+        window.has_social_share_feature = true;
+        window.has_contract_feature = true;
+        window.qixinbao_key = '9216410b077a4a6e9a097da100d533fa';
+
+        window.qiniu_auth = {
+            bucket: window.qiniu_bucket,
+            token: window.qiniu_token
+        };
+
+        window.current_user_id = '9';
+        window.current_org_id  = '10008';
+        window.current_user_token = '3ab624476409c3c1a696e093dee7eb2b';
+        window.current_money_digit = '2'
+        window.current_quantity_digit = '6'
+
+        window.session_key = '_vcooline_ikcrm_production_demo.ikcrm.com_session';
+        window.session_val = 'NTFlSjI2MTI0dWRkaklhNzF0Zm1jWTE2c2twRmhqYVU4K05KdWxlUU0yTlB5bzlNN0FFVjFINlpiNkNnRSt3QWpQYlFadkU2SGxQQk9sYmxuOTI4QnFHREp0dkdYL01EemdGdkdIZ0ViSmMrQ1BnWWVlMFkwVUVtalhMZmpSU1hvMWd0RXdpZW9ZZjJORGxNYkdycGpreHFQbUVRdjhEN1ZFdWtjS0QrLytVcjg5Ykp6MnB6VExtQUZRa2RCVnl3WW42bE9CNFBlMFJiTkJuaDdEb0V5QnU0WC9rUEtaQ1RnL3BjKzU5cUl1L0d1UHFBUm9VRHRQRjNaMDlCemZBZUZmR3VZUTZlaTZzSUlzNnRlaE1zcUNHZFBZQ1gxeXBjM3B2MHBkQzZBdW05VFB3c0hNL1BNQWxiRWNIMUNwQ1UtLXVKcFNMMkt4eHM0dXh5VEYzazUxZUE9PQ==--8066e66fa676f24e632cbe1ba7c26bf3bd45e4ec';
+        window.joinedInvoicing = false;
+
+
+        //]]>
+    </script>
+    <link rel="stylesheet" media="all" href="/assets/plugins-5ede6551c0190471e2f911c144ea243da7c5444abd27c890bfa4435b3b146f43.css" data-turbolinks-track="true" />
+    <link rel="stylesheet" media="all" href="/assets/vendor-578b85e917a3c945989ee6377006a2def4e7c64f3f632b1f480f7d3aa3fb275c.css" data-turbolinks-track="true" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" media="all" href="/assets/ik_style-ac2be1e3f6e86d91bd5b34d890598b26a8cfdb92ca858c82a263914560636655.css" data-turbolinks-track="true" type="text/css" charset="utf-8" />
+    <script src="/assets/support-1af6897e644e469757503aad77b927ea4de6d541f67e9a2b92fd309377d9c14a.js" data-turbolinks-track="true" data-turbolinks-eval="false"></script>
+    <script src="/assets/application-7bba78bd6fabd6759fda112dd6d5555555f245b519407eb1c184381d5e1fc1a1.js" data-turbolinks-track="false" data-turbolinks-eval="false"></script>
+    <script src="/assets/init_library-ad7c24e9ccf9328430e425ff72663ade1ebe8c6da8e1db6655885e77a70d6089.js" data-turbolinks-track="false" data-turbolinks-eval="false"></script>
+    <meta name="csrf-param" content="authenticity_token" />
+    <meta name="csrf-token" content="LpH1l15MfLWiVvxCZBol7tHv6jQVrCl3/q1GjjYegIPc9xoxyY+YO1cdjAWfVFqf//yPwvlJMl6ADPPhuQAKYg==" />
+</head>
+<body class="" data-no-turbolink="" data-uuid="b8416531-6dbd-460b-8627-b0bd8f4e6e2e">
+<section class="vbox">
+    <div class="warning js-stale-session-flash stale-session-flash hide">
+        <svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+            <path d="M8.865 1.52c-.18-.31-.51-.5-.87-.5s-.69.19-.87.5L.275 13.5c-.18.31-.18.69 0 1 .19.31.52.5.87.5h13.7c.36 0 .69-.19.86-.5.17-.31.18-.69.01-1L8.865 1.52zM8.995 13h-2v-2h2v2zm0-3h-2V6h2v4z"></path>
+        </svg>
+        <span class="signed-in-tab-flash hide">当前页面长时间未操作或者在其他 Tab 登录。<a href=""><strong>重新加载</strong></a> 来刷新你的会话。</span>
+        <span class="signed-out-tab-flash hide">当前页面长时间未操作或者在其他 Tab 退出<a href=""><strong>重新加载</strong></a> 来刷新你的会话。</span>
+    </div>
+    <header class="header navbar navbar-fixed-top-xs">
+        <div class="navbar-header head_left">
+            <a href="/" class="navbar-brand text-ellipsis"> <img width="30" height="30" src="https://dn-ikcrm-files-dev.qbox.me/attachments/files/5514/bdzxh2000_1544001685535_22.png" alt="Bdzxh2000 1544001685535 22" /> 瑞熙投资11111 </a>
+        </div>
+        <div class="pull-right marr15">
+            <ul class="nav navbar-nav navbar-right m-n hidden-xs marl150">
+                <li class="padm10 search-hover">
+                    <div id="sb-search" class="sb-search">
+                        <form id="glob_site_search" action="/search" accept-charset="UTF-8" method="get">
+                            <input name="utf8" type="hidden" value="✓" />
+                            <input type="text" name="query" id="glob_site_search_query" class="sb-search-input" placeholder="请输入搜索关键词" />
+                            <input class="sb-search-submit" type="submit" value="" />
+                            <span class="sb-icon-search"> <i class="fa fa-search marr5"></i><span>搜索</span> </span>
+                        </form>
+                    </div> </li>
+                <li data-placement="top auto " title="添加快捷方式到桌面" data-viewport=""> <a title="你可以下载 爱客CRM 的快捷方式，并且放置在桌面上。" target="_blank" download="爱客CRM.url" href="/ikcrm_shortcut.url"> <span>快捷方式</span> </a> </li>
+                <li class="hidden-xs" title="消息通知" id="notifications_navbar"> </li>
+                <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span>帮助</span> <b class="caret"></b> </a>
+                    <ul class="dropdown-menu animated fadeInRight" style="left:-54px;right:auto">
+                        <span class="arrow top"></span>
+                        <li title="帮助中心"> <a target="_blank" href="https://www.ikcrm.com/help"> 帮助中心 </a> </li>
+                        <li><a href="http://wpa.b.qq.com/cgi/wpa.php?ln=2&amp;uin=4008671101" target="_blank"> QQ客服</a></li>
+                        <li><a href="javascript:;" data-toggle="modal" data-target="#feedback">意见反馈</a></li>
+                        <li><a href="javascript:;" data-toggle="modal" data-target="#tel">客服电话</a></li>
+                        <li><a class="nav_current_user_binding_wechat_modal" href="javascript:;">关注服务号</a></li>
+                        <li><a href="javascript:;" data-toggle="modal" data-target="#downLoadAPP">下载App</a></li>
+                    </ul> </li>
+                <li title="系统管理"> <a class="dropdown-toggle setting_experience" href="javascript:;"> 设置 </a> </li>
+                <li class="dropdown" title="个人信息"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class="user_name">stella</span> <b class="caret"></b> </a>
+                    <ul class="dropdown-menu animated fadeInRight">
+                        <span class="arrow top"></span>
+                        <li> <a class="nav_current_user_info_modal" href="javascript:;">个人信息</a> </li>
+                        <li><a class="notification_setting_modal" data-toggle="modal" data-target="#notification_setting_modal" href="javascript:;">提醒设置</a></li>
+                        <li><a class="security_setting_modal" data-toggle="modal" href="#security_setting_modal">安全中心</a></li>
+                        <li class="divider"></li>
+                        <li><a class="sign_out" rel="nofollow" data-method="delete" href="/users/sign_out">安全退出</a></li>
+                    </ul> </li>
+            </ul>
+        </div>
+    </header>
+    <!--feedback-->
+    <div class=" modal fade in" id="feedback" role="dialog" aria-hidden="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" type="button" aria-hidden="true" data-dismiss="modal">&times;</button>
+                    <h4>意见反馈</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="padm20">
+                        <p class="padv20">感谢您使用爱客CRM！</p>
+                        <p class="padb20">如您在使用中发现什么问题，或对爱客CRM有什么新的想法和建议，都可以发送电子邮件联系我们。我们会在第一时间回复你的意见，谢谢！</p>
+                        <p>联系邮箱：<a href="mailto: service@ikcrm.com?&amp;subject=反馈意见" class="text-primary">service@ikcrm.com</a></p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--telphone-->
+    <div class="modal fade in" id="tel" role="dialog" aria-hidden="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" type="button" aria-hidden="true" data-dismiss="modal">&times;</button>
+                    <h4>客服电话</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="padm20">
+                        <p class="fz18 padv20">客服电话：400-867-1101</p>
+                        <p class="padb20">工作时间：每周一至周五 上午9：30 至 下午 18：30</p>
+                        <p>客服电话提供产品帮助、用户反馈等服务，为您解决使用爱客CRM产品过程中遇到的各种问题，帮助您更好的了解我们。</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- downLoadApp -->
+    <div class="modal" id="downLoadAPP" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content modal-content-wrapper">
+                <div class="modal-header">
+                    <button type="button" class="close close-modal-button">&times;</button>
+                    <h4 class="modal-title">下载App</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="dialogContent">
+                        <h4>扫描二维码，下载爱客CRM App</h4>
+                        <img src="https://www.ikcrm.com/assets/ikcrm_mobile.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section>
+        <section class="hbox stretch">
+            <aside class="aside-sm hidden-print hidden-xs " id="nav">
+                <section class="vbox aside-sm">
+                    <header class="header text-left clearfix pad0">
+                        <ul class="nav" data-toggle="dropdown">
+                            <li> <a href="#" class="btn-primary nav-shortcut-entry">
+                                <div class="icon-left">
+                                    <i class="fa fa-plus"></i>
+                                </div> <span>快捷新增</span> </a> </li>
+                            <li class="divider"></li>
+                        </ul>
+                        <ul class="dropdown-menu__shortcut dropdown-menu text-left">
+                            <li> <a data-href="/leads/new" data-disable-with="请稍候..." data-remote="true" href="javascript:;">线索</a> </li>
+                            <li> <a data-href="/customers/new" data-disable-with="请稍候..." data-remote="true" href="javascript:;">客户</a> </li>
+                            <li> <a data-href="/contacts/new" data-disable-with="请稍候..." data-remote="true" href="javascript:;">联系人</a> </li>
+                            <li> <a data-href="/opportunities/new" data-disable-with="请稍候..." data-remote="true" href="javascript:;">商机</a> </li>
+                            <li> <a data-href="/contracts/new" data-disable-with="请稍候..." data-remote="true" href="javascript:;">合同</a> </li>
+                        </ul>
+                    </header>
+                    <section class="w-f scrollable">
+                        <nav class="nav-primary hidden-xs mart10">
+                            <ul class="nav">
+                                <li data-nav-url="/,/#dashboard" class=""> <a href="/#dashboard" data-nav-url="/,/#dashboard">
+                                    <div class="icon-left">
+                                        <i class="fa fa-dashboard icon"> </i>
+                                    </div> <span>工作台</span> </a> </li>
+                                <li class="" navid="1" style=""> <a class="" href="/leads">
+                                    <div class="icon-left">
+                                        <i class="fa fa-globe icon"></i>
+                                    </div> <span>线索</span> </a></li>
+                                <li class="" navid="2" style=""> <a class="" href="/customers">
+                                    <div class="icon-left">
+                                        <i class="fa fa-group icon"></i>
+                                    </div> <span>客户</span> </a></li>
+                                <li class="" navid="15" style=""> <a class="" href="/customer_commons">
+                                    <div class="icon-left">
+                                        <i class="fa fa-group icon"></i>
+                                    </div> <span>客户公海</span> </a></li>
+                                <li class="" navid="3" style=""> <a class="" href="/contacts">
+                                    <div class="icon-left">
+                                        <i class="fa fa-comments icon"></i>
+                                    </div> <span>联系人</span> </a></li>
+                                <li class="" navid="4" style=""> <a class="" href="/opportunities">
+                                    <div class="icon-left">
+                                        <i class="fa fa-rmb icon"></i>
+                                    </div> <span>商机</span> </a></li>
+                                <li class="actived" navid="5" style=""> <a class="actived" href="/contracts">
+                                    <div class="icon-left">
+                                        <i class="fa fa-file-text icon"></i>
+                                    </div> <span>合同</span> </a></li>
+                                <li class="" navid="17" style=""> <a class="" href="/received_payment_center/received_payment_plans?scope=received_payment_plans">
+                                    <div class="icon-left">
+                                        <i class="fa fa-rmb icon"></i>
+                                    </div> <span>回款</span> </a></li>
+                                <li class="" navid="6" style=""> <a class="" href="/products">
+                                    <div class="icon-left">
+                                        <i class="fa fa-tags icon"></i>
+                                    </div> <span>产品</span> </a></li>
+                                <li class="" navid="8" style=""> <a class="" href="/report_center/revisit_logs">
+                                    <div class="icon-left">
+                                        <i class="fa fa-bar-chart-o icon"></i>
+                                    </div> <span>报表中心</span> </a></li>
+                                <li class="" navid="9" style=""> <a class="" href="/schedule_reports">
+                                    <div class="icon-left">
+                                        <i class="fa fa-files-o icon"></i>
+                                    </div> <span>工作报告</span> </a></li>
+                                <li class="" navid="10" style=""> <a class="" href="/revisit_logs">
+                                    <div class="icon-left">
+                                        <i class="fa fa-pencil-square-o icon"></i>
+                                        <b class="bg-info"></b>
+                                    </div> <span>跟进记录</span> </a></li>
+                                <li class="" navid="10" style=""> <a class="" href="/sales_commissions/payslip_commission">
+                                    <div class="icon-left">
+                                        <i class="fa fa-rmb icon"></i>
+                                    </div> <span>业绩提成</span> </a></li>
+                                <li class="" navid="18" style=""> <a class="" href="/expense_center/expense_accounts?scope=all_own">
+                                    <div class="icon-left">
+                                        <i class="fa fa-rmb icon"></i>
+                                        <b class="bg-info"></b>
+                                    </div> <span>费用报销</span> </a></li>
+                                <li class="" navid="19" style=""> <a class="" href="/business_query/business_query_subscriptions/subscription">
+                                    <div class="icon-left">
+                                        <i class="fa fa-eye icon"></i>
+                                        <b class="bg-info"></b>
+                                    </div> <span>风险信息订阅</span> </a></li>
+                                <li class="" navid="16" style=""> <a class="" href="/sms_marketing/sms/group_send_page">
+                                    <div class="icon-left">
+                                        <i class="fa fa-envelope icon"></i>
+                                        <b class="bg-info"></b>
+                                    </div> <span>短信群发</span> </a></li>
+                                <li class="" navid="11" style=""> <a class="" href="/data_reports">
+                                    <div class="icon-left">
+                                        <i class="fa fa-file-text icon"></i>
+                                        <b class="bg-info"></b>
+                                    </div> <span>数据上报</span> </a></li>
+                                <li class="" navid="13" style=""> <a class="" href="/wiki">
+                                    <div class="icon-left">
+                                        <i class="fa fa-book icon"></i>
+                                        <b class="bg-info"></b>
+                                    </div> <span>知识库</span> </a></li>
+                                <li class="" navid="14" style=""> <a class="" href="/social_shares">
+                                    <div class="icon-left">
+                                        <i class="fa fa-share-alt icon"></i>
+                                        <b class="bg-info"></b>
+                                    </div> <span>社交推广</span> </a></li>
+                                <li class="pos-rlt setmenli"> <a href="javascript:;" class="">
+                                    <div class="icon-left">
+                                        <i class="fa fa-plus icon"></i>
+                                    </div> <span>更多</span> </a>
+                                    <ul class="sub_menu " style="display: none;">
+                                        <li> <a href="javascript:;" tabindex="1"><input type="checkbox" value="leads" checked="" /><label class="checkbox-custom"> <i class="fa fa-fw fa-square-o checked"></i> </label> <span>线索</span></a> </li>
+                                        <li> <a href="javascript:;" tabindex="2"><input type="checkbox" value="customers" checked="" /><label class="checkbox-custom"> <i class="fa fa-fw fa-square-o checked"></i> </label> <span>客户</span> </a> </li>
+                                        <li> <a href="javascript:;" tabindex="15"><input type="checkbox" value="customer_commons" checked="" /><label class="checkbox-custom"> <i class="fa fa-fw fa-square-o checked"></i> </label> <span>客户公海</span> </a> </li>
+                                        <li> <a href="javascript:;" tabindex="3"><input type="checkbox" value="contacts" checked="" /><label class="checkbox-custom"> <i class="fa fa-fw fa-square-o checked"></i> </label> <span>联系人</span> </a> </li>
+                                        <li> <a href="javascript:;" tabindex="4"><input type="checkbox" value="opportunities" checked="" /><label class="checkbox-custom"> <i class="fa fa-fw fa-square-o checked"></i> </label> <span>商机</span> </a> </li>
+                                        <li> <a href="javascript:;" tabindex="5"><input type="checkbox" value="contracts" checked="" /><label class="checkbox-custom"> <i class="fa fa-fw fa-square-o checked"></i> </label> <span>合同</span> </a> </li>
+                                        <li> <a href="javascript:;" tabindex="17"><input type="checkbox" value="received_payment_center" checked="" /><label class="checkbox-custom"> <i class="fa fa-fw fa-square-o checked"></i> </label> <span>回款</span> </a> </li>
+                                        <li> <a href="javascript:;" tabindex="6"><input type="checkbox" value="products" checked="" /><label class="checkbox-custom"> <i class="fa fa-fw fa-square-o checked"></i> </label> <span>产品</span> </a> </li>
+                                        <li> <a href="javascript:;" tabindex="8"><input type="checkbox" value="report_center" checked="" /><label class="checkbox-custom"> <i class="fa fa-fw fa-square-o checked"></i> </label> <span>报表中心</span> </a> </li>
+                                        <li> <a href="javascript:;" tabindex="9"><input type="checkbox" value="schedule_reports" checked="" /><label class="checkbox-custom"> <i class="fa fa-fw fa-square-o checked"></i> </label> <span>工作报告</span></a> </li>
+                                        <li> <a href="javascript:;" tabindex="10"><input type="checkbox" value="revisit_logs" checked="" /><label class="checkbox-custom"> <i class="fa fa-fw fa-square-o checked"></i> </label> <span>跟进记录</span></a> </li>
+                                        <li> <a href="javascript:;" tabindex="10"><input type="checkbox" value="sales_commissions" checked="" /><label class="checkbox-custom"> <i class="fa fa-fw fa-square-o checked"></i> </label> <span>业绩提成</span></a> </li>
+                                        <li> <a href="javascript:;" tabindex="18"><input type="checkbox" value="expense_accounts" checked="" /><label class="checkbox-custom"> <i class="fa fa-fw fa-square-o checked"></i> </label> <span>费用报销</span></a> </li>
+                                        <li> <a href="javascript:;" tabindex="19"><input type="checkbox" value="business_query_subscriptions" checked="" /><label class="checkbox-custom"> <i class="fa fa-fw fa-square-o checked"></i> </label> <span>风险信息订阅</span></a> </li>
+                                        <li> <a href="javascript:;" tabindex="16"><input type="checkbox" value="sms_group_sends" checked="" /><label class="checkbox-custom"> <i class="fa fa-fw fa-square-o checked"></i> </label> <span>短信群发</span></a> </li>
+                                        <li> <a href="javascript:;" tabindex="11"><input type="checkbox" value="data_reports" checked="" /><label class="checkbox-custom"> <i class="fa fa-fw fa-square-o checked"></i> </label> <span>数据上报</span></a> </li>
+                                        <li> <a href="javascript:;" tabindex="13"><input type="checkbox" value="wiki" checked="" /> <label class="checkbox-custom"> <i class="fa fa-fw fa-square-o checked"></i> </label> <span>知识库</span></a> </li>
+                                        <li> <a href="javascript:;" tabindex="14"><input type="checkbox" value="social_shares" checked="" /> <label class="checkbox-custom"> <i class="fa fa-fw fa-square-o checked"></i> </label> <span>社交推广</span></a> </li>
+                                    </ul> </li>
+                            </ul>
+                        </nav>
+                    </section>
+                    <footer class="footer hidden-xs">
+                        <a href="javascript:;" id="aside-stretch-toggle" class="pull-right btn btn-icon "> <i class="fa fa-outdent icon-switch"></i> </a>
+                        <div class="btn-group hidden-nav-xs">
+                        </div>
+                    </footer>
+                </section>
+            </aside>
+            <section id="content" class="tab_new">
+                <section class="vbox">
+                    <section class="scrollable list-view">
+                        <ul class="nav nav-tabs topnav pull-left ">
+                            <li class="nav-tabs__title">合同</li>
+                            <li class="active"> <a class="nav-link" href="/contracts?scope=all_own">全部合同</a> </li>
+                            <li class=" "> <a class="nav-link" href="/contracts?scope=my_own">我的合同</a> </li>
+                            <li class=""> <a class="nav-link" href="/contracts?scope=sub_own">我下属的合同</a> </li>
+                            <li class=""> <a class="nav-link" href="/contracts?scope=my_assist">我协作的合同</a> </li>
+                            <li class=""> <a class="nav-link" href="/contracts?scope=sub_assist">我下属协作的合同</a> </li>
+                            <li class=""> <a class="nav-link" href="/contracts?scope=applying"> 待审批的合同 <span class="red-dot bg-danger">　</span> </a> </li>
+                            <li class=""> <a class="nav-link" href="/contracts?approve_status=draft&amp;scope=my_own"> 我的草稿 </a> </li>
+                        </ul>
+                        <div class="pull-right mart20 marr15">
+                            <a class="btn btn-primary btn-sm  btn-inline" data-href="/contracts/new" data-disable-with="请稍候..." data-remote="true" href="javascript:;"> <i class="fa fa-plus m-r-xs"></i>新增合同 </a>
+                            <button class="btn btn-default btn-outline btn-sm dropdown-toggle" data-toggle="dropdown">导入 <span class="caret"></span> </button>
+                            <ul class="dropdown-menu">
+                                <li> <a class="text-success" data-href="/entity_loaders/import/Contract" data-disable-with="请稍候..." data-remote="true" href="javascript:;"> 导入合同 </a> </li>
+                                <li> <a class="text-success" data-href="/entity_loaders/import/RevisitLog?loggable_type=Contract" data-target="#importCus" data-toggle="modal" data-disable-with="请稍候..." data-remote="true" href="javascript:;"> 导入合同跟进记录 </a> </li>
+                            </ul>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tab-content padder">
+                            <div id="tab1" class="tab-pane active ">
+                                <div class="filter-box switch-close" id="quick_filter_column_container">
+                                    <section class="panel panel-default marb0">
+                                        <div class="panel-body no-padder">
+                                            <div class="search-cont">
+                                                <div class="text-center">
+                                                    <i class="fa  fa-spinner fa-spin fz14"></i> 正在加载
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <div class="text-center ">
+                                        <a href="javascript:;" class="filter-down" data-toggle="click-switch" data-parents=".filter-box"> <span class="switch-show" title="收起筛选"><i class="fa fa-angle-up "></i></span> <span class="switch-hide" title="展开筛选"><i class="fa fa-angle-down "></i></span> </a>
+                                    </div>
+                                </div>
+                                <div class="sekect_box clearfix marb10">
+                                    <span class="pull-left lineh30 marl15 mart10"> 已选 <span class="green font-bold checked-count"> 0 </span> 个合同 </span>
+                                    <div class="pull-left mart10">
+                                        <a class="btn btn-default btn-sm massive-transfer-btn marl10 btn-outline" data-href="/contracts/massive_transfer" data-disable-with="请稍候..." data-remote="true" href="javascript:;"> <i class="fa fa-mail-forward m-r-xs"></i>转移 </a>
+                                        <a class="btn btn-default btn-sm batch-edit-assist-user marl10 btn-outline" href="javascript:;"> <i class="fa fa-edit m-r-xs"></i>添加协作人 </a>
+                                        <a class="btn btn-default btn-sm bulk-delete marl10 btn-outline" href="javascript:;"> <i class="fa fa-times m-r-xs"></i>删除 </a>
+                                    </div>
+                                    <div class="w-400px dis_ib pull-right Contract-search">
+                                        <div class="input-group">
+                                            <div class="table-cell w-150px">
+                                                <select name="custom_field_name" id="custom_field_name" class="select-default native_select2"><option value="title">合同标题</option> <option value="our_signer">我方签约人</option> <option value="sn">合同编号</option> <option value="customer_signer">客户方签约人</option> <option value="special_terms">备注</option></select>
+                                            </div>
+                                            <div class="table-cell w-200px padl5">
+                                                <input type="text" name="search_key" id="search_key" class="form-control  addclear" />
+                                            </div>
+                                            <span class="input-group-btn"> <button name="button" type="submit" id="search_key_btn" class="btn btn-default btn-outline">查询</button> </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <section class="panel panel-default panel--list">
+                                    <div class="list_table list_edit table-dragable table-async table-fixed">
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>
+</section>
+<script data-turbolinks-eval="false">
+    $(function () {
+        window.resize_window_height();
+        moment.locale('zh-CN');
+
+
+        window.notificationNav = new VcoolineIkcrm.Views.Shared.NotificationView({el: "#notifications_navbar"});
+        _.delay(function () {
+            window.notificationNav.show()
+        }, 10);
+
+        localStorage.setItem('session-data', JSON.stringify({user_id: window.current_user_id}));
+        init_session_store();
+    });
+</script>
+<script>
+
+</script>
+<script type="text/javascript" charset="utf-8" id="page-javascript">
+    window.__global_path__ = {"scope":"all_own","per_page":10,"type":"advance"};
+    window.__global_flag__ = true;
+    $(function(){
+        var listTableView = null;
+
+        $("body").unbind("filterBoxChanged");
+        $("body").bind("filterBoxChanged", function(e){
+            $(e.currentTarget).attr("data-boxChanged", true);
+
+            var customers = new VcoolineIkcrm.Collections.CustomersCollection();
+            VcoolineIkcrm.Utils.Selector.init({
+                'id-field': "#filter_customer_id",
+                'handle': "#filter_customer_cus",
+                'module': "Customers",
+                'el': '#filter_customer_selector',
+                'view': "CustomerSelectorView",
+                'selected_model': null,
+                'view_opts': {
+                    'select_url': customers.url()
+                },
+                'select_opts': {
+                    placeholder: "全部客户",
+                    allowClear: true
+                }
+            });
+
+            $("#filter_customer_id").change(function(e){
+                var customer_id = $(this).val();
+                VcoolineIkcrm.Utils.ListTableAsync.trigger_select2_fresh('customer_id', customer_id);
+            });
+
+            var products = new VcoolineIkcrm.Collections.ProductsCollection();
+            VcoolineIkcrm.Utils.Selector.init({
+                'id-field': "#filter_product_id",
+                'handle': "#filter_select_cus",
+                'module': "Products",
+                'el': '#filter_product_selector',
+                'view': "ProductSelectorView",
+                'selected_model': null,
+                'view_opts': {
+                    'select_url': products.url()
+                },
+                'select_opts': {
+                    placeholder: "全部产品",
+                    allowClear: true
+                }
+            });
+
+            $("#filter_product_id").change(function(e){
+                var product_id = $(this).val();
+                VcoolineIkcrm.Utils.ListTableAsync.trigger_select2_fresh('product_id', product_id);
+            });
+
+
+            // 挂截地区选择器相关操作
+            $('#contract_address_select_group .filter_column_address_select').select2({
+                width: "100%"
+            });
+
+            $('.search-cont .search-li[data-type-format="address_select"]').on('select2-opening' , function(e){
+                if($(e.target).hasClass('filter_column_address_select')){
+                    var after_siblings = $(e.target).parent().nextAll();
+                    after_siblings.each(function(idx , item){
+                        $(item).find('select.filter_column_address_select').select2('val' , $(item).find('option:first').val());
+                    });
+                }
+            });
+            $('.search-cont .search-li[data-type-format="address_select"]').change(function(e){
+                if($(e.target).hasClass('filter_column_address_select')){
+                    var _href = $(e.target).find('>option:selected').val();
+                    VcoolineIkcrm.Utils.ListTableAsync.trigger_url_fresh(_href);
+                }
+            });
+
+
+            var sign_date_query_param = {"type":"advance","filters":[{"name":"sign_date","operator":"within","filter_user_custom_field":null,"query":{}}],"scope":"all_own","order":null,"sort":null}
+
+            var sign_date_datetime_range_picker_view = new VcoolineIkcrm.Views.Shared.DateTimeRangePickerView({
+                el: '#contract_sign_date_time',
+                start_at: '',
+                end_at: '',
+                callback: function (time_start, time_end) {
+                    var query_param = {"scope":"all_own","type":"advance"};
+                    query_param.filters = query_param.filters || [];
+
+                    if (! _.find(query_param.filters, function(filter){ return filter.name == "sign_date"; })) {
+                        query_param.filters.push(sign_date_query_param['filters'][0])
+                    }
+
+                    query_param.filters = _.map(query_param.filters, function (filter) {
+                        if ( filter.name == "sign_date") {
+                            filter["query"] = [time_start, time_end]
+                        }
+                        return filter
+                    })
+                    //处理时间操作异步数据请求
+                    if(window.__global_flag__){
+                        VcoolineIkcrm.Utils.ListTableAsync.trigger_search_fresh(query_param);
+                    }else{
+                        window.location.search = "?" + rails_query_param(query_param);
+                    }
+                }
+            });
+            var revisit_remind_at_query_param = {"type":"advance","filters":[{"name":"revisit_remind_at","operator":"within","filter_user_custom_field":null,"query":{}}],"scope":"all_own","order":null,"sort":null}
+
+            var revisit_remind_at_datetime_range_picker_view = new VcoolineIkcrm.Views.Shared.DateTimeRangePickerView({
+                el: '#contract_revisit_remind_at_time',
+                start_at: '',
+                end_at: '',
+                callback: function (time_start, time_end) {
+                    var query_param = {"scope":"all_own","type":"advance"};
+                    query_param.filters = query_param.filters || [];
+
+                    if (! _.find(query_param.filters, function(filter){ return filter.name == "revisit_remind_at"; })) {
+                        query_param.filters.push(revisit_remind_at_query_param['filters'][0])
+                    }
+
+                    query_param.filters = _.map(query_param.filters, function (filter) {
+                        if ( filter.name == "revisit_remind_at") {
+                            filter["query"] = [time_start, time_end]
+                        }
+                        return filter
+                    })
+                    //处理时间操作异步数据请求
+                    if(window.__global_flag__){
+                        VcoolineIkcrm.Utils.ListTableAsync.trigger_search_fresh(query_param);
+                    }else{
+                        window.location.search = "?" + rails_query_param(query_param);
+                    }
+                }
+            });
+            var created_at_query_param = {"type":"advance","filters":[{"name":"created_at","operator":"within","filter_user_custom_field":null,"query":{}}],"scope":"all_own","order":null,"sort":null}
+
+            var created_at_datetime_range_picker_view = new VcoolineIkcrm.Views.Shared.DateTimeRangePickerView({
+                el: '#contract_created_at_time',
+                start_at: '',
+                end_at: '',
+                callback: function (time_start, time_end) {
+                    var query_param = {"scope":"all_own","type":"advance"};
+                    query_param.filters = query_param.filters || [];
+
+                    if (! _.find(query_param.filters, function(filter){ return filter.name == "created_at"; })) {
+                        query_param.filters.push(created_at_query_param['filters'][0])
+                    }
+
+                    query_param.filters = _.map(query_param.filters, function (filter) {
+                        if ( filter.name == "created_at") {
+                            filter["query"] = [time_start, time_end]
+                        }
+                        return filter
+                    })
+                    //处理时间操作异步数据请求
+                    if(window.__global_flag__){
+                        VcoolineIkcrm.Utils.ListTableAsync.trigger_search_fresh(query_param);
+                    }else{
+                        window.location.search = "?" + rails_query_param(query_param);
+                    }
+                }
+            });
+
+            var filtercolumnsView = new VcoolineIkcrm.Views.Shared.FilterColumnsView({
+                modelKlass: 'Contract',
+                default_columns: [{"name":"approve_status","filter_format":"link","label":"审批状态"},{"name":"finish_approve_at","filter_format":"time","label":"审批完成时间"},{"name":"submit_applying_at","filter_format":"time","label":"审批提交时间"},{"name":"status","default":true,"filter_format":"link","label":"合同状态"},{"name":"start_at","filter_format":"time","label":"合同开始日期"},{"name":"end_at","filter_format":"time","label":"合同结束日期"},{"name":"category","filter_format":"link","label":"合同类型"},{"name":"payment_type","filter_format":"link","label":"付款方式"},{"name":"customer","filter_format":"select2","label":"对应客户"},{"name":"address.region_info","label":"客户地区","filter_format":"address_select"},{"name":"product_assets","filter_format":"select2","label":"关联产品"},{"name":"sign_date","default":true,"filter_format":"time","label":"签约日期"},{"name":"revisit_remind_at","filter_format":"time","label":"下次跟进时间"},{"name":"created_at","filter_format":"time","label":"创建时间"},{"name":"creator","label":"创建人","filter_format":"creator"},{"name":"updated_at","filter_format":"time","label":"更新于"},{"name":"assist_user","label":"协作人","filter_format":"assist_user"},{"name":"real_revisit_at","filter_format":"time","label":"实际跟进时间"},{"name":"owned_department","default":true,"label":"所属部门","filter_format":"department"},{"name":"user","default":true,"label":"负责人","filter_format":"user"},{"name":"before_user","label":"前负责人","filter_format":"before_user"}],
+                columns: [{"name":"approve_status","filter_format":"link","label":"审批状态","status":"-1"},{"name":"finish_approve_at","filter_format":"time","label":"审批完成时间","status":"-1"},{"name":"submit_applying_at","filter_format":"time","label":"审批提交时间","status":"-1"},{"name":"status","default":true,"filter_format":"link","label":"合同状态","status":"-1"},{"name":"start_at","filter_format":"time","label":"合同开始日期","status":"-1"},{"name":"end_at","filter_format":"time","label":"合同结束日期","status":"-1"},{"name":"category","filter_format":"link","label":"合同类型","status":"1"},{"name":"payment_type","filter_format":"link","label":"付款方式","status":"-1"},{"name":"customer","filter_format":"select2","label":"对应客户","status":"1"},{"name":"address.region_info","label":"客户地区","filter_format":"address_select","status":"1"},{"name":"product_assets","filter_format":"select2","label":"关联产品","status":"1"},{"name":"sign_date","default":true,"filter_format":"time","label":"签约日期","status":"1"},{"name":"revisit_remind_at","filter_format":"time","label":"下次跟进时间","status":"1"},{"name":"created_at","filter_format":"time","label":"创建时间","status":"1"},{"name":"creator","label":"创建人","filter_format":"creator","status":"-1"},{"name":"updated_at","filter_format":"time","label":"更新于","status":"-1"},{"name":"assist_user","label":"协作人","filter_format":"assist_user","status":"-1"},{"name":"real_revisit_at","filter_format":"time","label":"实际跟进时间","status":"-1"},{"name":"owned_department","default":true,"label":"所属部门","filter_format":"department","status":"-1"},{"name":"user","default":true,"label":"负责人","filter_format":"user","status":"-1"},{"name":"before_user","label":"前负责人","filter_format":"before_user","status":"-1"}]
+            });
+
+            listTableView = new VcoolineIkcrm.Views.Shared.ListTableView({
+                el: '.list_table',
+                async_table_opts: {
+                    section_only: true
+                },
+                fix_table_opts: {"left":2,"head":false,"z-index":50},
+                remote_popover_opts: {
+                    product_asset_fields_permission_list: []
+                }
+            });
+            listTableView.launch_table();
+            $(".table-async").trigger("fresh_table");
+
+            if (typeof(init_quick_search) === "function") {
+                init_quick_search(function (url) {
+                    var query_param = $.parseParams(url);
+                    VcoolineIkcrm.Utils.ListTableAsync.trigger_search_fresh({search_key: query_param['search_key'], custom_field_name: query_param['custom_field_name']});
+                }, $('.Contract-search'))
+            }
+
+            var filter_column_collapse_view = new VcoolineIkcrm.Views.Shared.FilterColumnCollapseView({filter_columns: [{"name":"category","filter_format":"link","label":"合同类型","status":"1"},{"name":"customer","filter_format":"select2","label":"对应客户","status":"1"},{"name":"address.region_info","label":"客户地区","filter_format":"address_select","status":"1"},{"name":"product_assets","filter_format":"select2","label":"关联产品","status":"1"},{"name":"sign_date","default":true,"filter_format":"time","label":"签约日期","status":"1"},{"name":"revisit_remind_at","filter_format":"time","label":"下次跟进时间","status":"1"},{"name":"created_at","filter_format":"time","label":"创建时间","status":"1"}]});
+            filter_column_collapse_view.render();
+
+            $('.sort-select').select2({minimumResultsForSearch: Infinity});
+            $('.sort-select').on("select2-open", function() {
+                $(document).trigger('click')
+            });
+            //modal link
+
+            var listView = new VcoolineIkcrm.Views.Shared.ListView({
+                el: '.tab-content',
+                url: "/contracts/bulk_delete",
+                itemClass: ".contract-checkbox",
+                export_url: '/contracts?export_page=1&amp;format_type=calculate_export_pages&amp;per_page=10&amp;scope=all_own',
+                batch_update_url: '/api/contracts/batch_update',
+                batch_update_assist_user_url:'/api/contracts/batch_update_assist_user',
+                idsName: "contract_ids",
+                entityName: '合同',
+                modelName: "Contract"
+            });
+
+        });
+
+        $("body").trigger("filterBoxChanged");
+    });
+</script>
+<div id="pop_tips">
+</div>
+<script src="/assets/application_beforebody-9c608d2a6baedeb8d7979e14a74abeb33e2a9fe09f763b2156fc607406b13ded.js" data-turbolinks-track="false" data-turbolinks-eval="false"></script>
+<!--体验建议-->
+<div class=" modal fade in" role="dialog" aria-hidden="false" id="setting_experience">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" type="button" aria-hidden="true" data-dismiss="modal">&times;</button>
+                <h4>体验建议</h4>
+            </div>
+            <div class="modal-body">
+                <div class="table-row pad10">
+                    <div class="table-cell">
+                        <ul class="padr15">
+                            <li class="marb15"><p>系统设置功能仅对注册帐号开放，如需设置更多功能和参数，请随时拨打免费咨询热线：400-867-1101。</p></li>
+                        </ul>
+                    </div>
+                    <div class="table-cell text-center ">
+                        <div>
+                            扫描二维码下载App
+                        </div>
+                        <img width="150px" src="/assets/ikcrm_mobile-33b130bc31504c9888cf777b0495124f76fcac8d4c537cb4623c824f89c89fc0.png" alt="Ikcrm mobile" />
+                    </div>
+                </div>
+                <div class="text-center mart10 experience_btn">
+                    <a href="javascript:;" data-dismiss="modal" class="btn  btn-default">确定</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--体验建议-->
+<div class="testbar">
+    <a class="test_btn test_btn2" href="/experience/exit_experience"><i class="fa fa-sign-out fa-flip-horizontal"></i>退出体验</a>
+</div>
+<script type="text/javascript">
+    $(".setting_experience").on('click', function(e){
+        e.preventDefault()
+
+        $("#setting_experience").modal('show');
+    })
+</script>
+<script>
+    (function() {
+        var _vds = _vds || [];
+        window._vds = _vds;
+        var _hmt = _hmt || [];
+        window._hmt = _hmt;
+
+        function initGrowingIO(accountId) {
+            _vds.push(['setAccountId', accountId]);
+
+            _vds.push(['setCS1', 'user_id', 9]);
+            _vds.push(['setCS2', 'organization_id', 10008]);
+            _vds.push(['setCS3', 'user_name', 'ste**a__9']);
+            _vds.push(['setCS4', 'organization_name', '瑞熙投****11__10008']);
+            _vds.push(['setCS6', 'organization_is_paied', '免费']);
+            _vds.push(['setCS7', 'industry', '高科技']);
+            _vds.push(['setCS10', 'users_count', 100]);
+            var vds = document.createElement('script');
+            vds.type='text/javascript';
+            vds.async = true;
+            vds.defer = true;
+            vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(vds, s);
+        }
+        function initBaiduStats(id) {
+            var hm = document.createElement("script");
+            hm.async = true;
+            hm.defer = true;
+
+            hm.src = "//hm.baidu.com/hm.js?" + id;
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        }
+
+
+    })();
+</script>
+</body>
+</html>

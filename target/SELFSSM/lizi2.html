@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" import="java.util.*"%>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+<table border="1">
+
+    <tr>
+        <th>编号</th>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>年龄</th>
+        <th>身份证</th>
+        <th>籍贯</th>
+        <th colspan="3">操作</th>
+    </tr>
+
+    <c:forEach items="${ls}" var="d" varStatus="st">
+        <tr>
+            <td>${d.id}</td>
+            <td>${d.uname}</td>
+            <td>${d.sex}</td>
+            <td>${d.age}</td>
+            <td>${d.card}</td>
+            <td>${d.addr}</td>
+            <td>
+                <a href="get?id=${d.id}"><button onclick=""></button></a>
+            </td>
+            <td>
+                <a href="editgo?id=${d.id}">修改</a>
+            </td>
+            <td>
+                <a href="delete?id=${d.id}">删除</a>
+            </td>
+        </tr>
+    </c:forEach>
+
+    <tr>
+        <td colspan="9">
+            <a href="addgo">添加</a>
+        </td>
+    </tr>
+
+</table>
+
+</body>
+</html>
