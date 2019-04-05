@@ -70,9 +70,9 @@ public class UserController {
 	@RequestMapping("list")
 	public ModelAndView list() {
 		ModelAndView mav = new ModelAndView();
-		List<User> ls = userService.list();
-		mav.addObject("ls", ls);
-		mav.setViewName("index");
+		List<User> entity = userService.list();
+		mav.addObject("entity", entity);
+		mav.setViewName("material");
 		return mav;
 	}
 
